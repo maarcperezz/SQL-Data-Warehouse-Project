@@ -60,7 +60,7 @@ BEGIN
 				CASE WHEN UPPER (TRIM (cst_material_status)) = 'S' THEN 'Single'
 					 WHEN UPPER (TRIM (cst_material_status)) = 'M' THEN 'Married'
 					 ELSE 'n/a'
-				END cst_material_status, -- Normalize marital status values readable format
+				END cst_material_status, -- Normalize marital status values readable format and rename 'material' to 'marital' 
 
 				CASE WHEN UPPER (TRIM (cst_gndr)) = 'F' THEN 'Female'
 					 WHEN UPPER (TRIM (cst_gndr)) = 'M' THEN 'Male'
