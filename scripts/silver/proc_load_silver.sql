@@ -19,6 +19,8 @@ Usage Example:
 */
 
 
+EXEC silver.load_silver
+
 CREATE OR ALTER PROCEDURE silver.load_silver AS
 BEGIN
 	
@@ -81,7 +83,7 @@ BEGIN
 		-- Loading silver.crm_prd_info
 		SET @start_time = GETDATE ();
 			PRINT '>> Truncating Table: silver.crm_prd_info';
-			TRUNCATE TABLE silver.crm_cust_info;
+			TRUNCATE TABLE silver.crm_prd_info;
 			PRINT '>> Inserting Data Into: silver.crm_prd_info';
 
 			INSERT INTO silver.crm_prd_info (
@@ -122,7 +124,7 @@ BEGIN
 		SET @start_time = GETDATE ();
 
 			PRINT '>> Truncating Table: silver.crm_sales_details';
-			TRUNCATE TABLE silver.crm_cust_info;
+			TRUNCATE TABLE silver.crm_sales_details;
 			PRINT '>> Inserting Data Into: silver.crm_sales_details';
 
 			INSERT INTO silver.crm_sales_details (
@@ -177,7 +179,7 @@ BEGIN
 		SET @start_time = GETDATE ();
 
 			PRINT '>> Truncating Table: silver.erp_cust_az12';
-			TRUNCATE TABLE silver.crm_cust_info;
+			TRUNCATE TABLE silver.erp_cust_az12;
 			PRINT '>> Inserting Data Into: silver.erp_cust_az12';
 
 			INSERT INTO silver.erp_cust_az12 (
@@ -208,7 +210,7 @@ BEGIN
 		SET @start_time = GETDATE ();
 
 			PRINT '>> Truncating Table: silver.erp_loc_a101';
-			TRUNCATE TABLE silver.crm_cust_info;
+			TRUNCATE TABLE silver.erp_loc_a101;
 			PRINT '>> Inserting Data Into: silver.erp_loc_a101';
 
 			INSERT INTO silver.erp_loc_a101(
@@ -232,7 +234,7 @@ BEGIN
 		SET @start_time = GETDATE ();
 
 			PRINT '>> Truncating Table: silver.erp_px_cat_g1v2';
-			TRUNCATE TABLE silver.crm_cust_info;
+			TRUNCATE TABLE silver.erp_px_cat_g1v2;
 			PRINT '>> Inserting Data Into: silver.erp_px_cat_g1v2';
 
 			INSERT INTO silver.erp_px_cat_g1v2(
