@@ -1,5 +1,88 @@
-🏗️ Data Warehouse & Analytics Project
+# 🏗️ SQL-Data-Warehouse-Project
 
-This repository contains a Data Warehouse and Analytics project inspired by the DataWithBaraa SQL Data Warehouse course.
-The objective of this project is to demonstrate, in a structured and practical way, how to design, build, and analyze a modern data warehouse using SQL, following industry-standard architectural patterns.
+Welcome to the **Data Warehouse and Analytics Project** repository 📊  
+This project showcases the end-to-end design and implementation of a modern **Data Warehouse**, from raw data ingestion to business-ready analytics. It is built as a **portfolio project** to demonstrate practical SQL, data modeling, and analytical skills following industry best practices.
 
+The project is inspired by the **DataWithBaraa SQL Data Warehouse Project**, adapted and extended as part of my personal learning journey into data-focused roles 🚀
+
+---
+
+## 📌 Project Requirements
+
+This project aims to simulate a real-world data warehousing scenario, focusing on clarity, data quality, and analytical usability.
+
+---
+
+## 🛠️ Building the Data Warehouse (Data Engineering)
+
+### 🎯 Objective
+Design and implement a modern **Data Warehouse** using SQL, consolidating sales data from multiple source systems to enable reliable analytics and informed decision-making.
+
+### 📋 Scope & Key Requirements
+
+- **📂 Data Sources**: Import data from two source systems (**ERP** and **CRM**) provided as CSV files  
+- **🏗️ Data Architecture**: Implement a **Medallion Architecture** (Bronze, Silver, Gold layers)  
+- **🧹 Data Quality**: Clean, standardize, and validate data before it is exposed for analytics  
+- **🔗 Integration**: Merge multiple sources into a single, analytics-friendly data model  
+- **📐 Modeling**: Create **fact and dimension tables** using a star schema approach  
+- **📦 Scope**: Focus on the latest available dataset (no historization required)  
+- **📝 Documentation**: Provide clear documentation to support both business users and analytics teams  
+
+---
+
+## 🏛️ Data Architecture Overview
+
+The Data Warehouse follows the **Bronze–Silver–Gold (Medallion) Architecture**, ensuring separation of concerns and data quality at each stage.
+
+### 🥉 Bronze Layer — Raw Data
+- Raw ingestion of CSV files into database tables  
+- Minimal transformations to preserve source data integrity  
+- Initial handling of schema alignment and basic validation  
+
+### 🥈 Silver Layer — Clean & Standardized Data
+- Data cleansing and normalization  
+- Removal of duplicates using **CTEs and window functions**  
+- Handling null values with **CASE statements** and **COALESCE**  
+- Standardization of categorical fields  
+- Joining datasets from multiple sources  
+
+### 🥇 Gold Layer — Business-Ready Data
+- No physical data loading (views only)  
+- Star schema with fact and dimension tables  
+- Optimized for reporting, BI tools, and ad-hoc analysis  
+- Provides clean, well-structured datasets for stakeholders
+
+---
+
+## 🧰 Tools & Technologies
+
+- **🧠 SQL** (data transformation and analytics)  
+- **🗄️ Relational Database** (SQL Server / PostgreSQL / MySQL – adaptable)  
+- **📄 CSV files** as data sources  
+- **🖊️ Draw.io** for data modeling and architecture diagrams  
+- **🔗 GitHub** for version control and documentation  
+
+---
+
+## 📚 Key Learnings
+
+Through this project, I strengthened my understanding of:
+
+- End-to-end data warehousing workflows  
+- Medallion Architecture design and implementation  
+- Writing clean, maintainable, and analytical SQL  
+- Data modeling for analytics (star schema)  
+- Bridging data engineering and data analytics concepts
+
+---
+
+## 👋 About Me
+
+Hi, I'm **Marc Pérez Aladrén**, a data-driven professional with a strong interest in **data analytics, data engineering, and digital transformation** 🚀  
+
+I hold a **Bachelor’s degree in Business Administration** from the University of Barcelona and a **Master’s in Global Digital Marketing**, and I recently worked at **SAP** as a **Digital Transformation Associate**, where I focused on data intelligence, account segmentation, CRM governance, and go-to-market analytics.
+
+This project represents my hands-on approach to learning by building **end-to-end data solutions**, bridging business context with technical execution. I’m particularly interested in roles where data, process optimization, and strategic decision-making intersect.
+
+🔗 **Connect with me on LinkedIn:**  
+[https://www.linkedin.com/in/marcperezaladren](https://www.linkedin.com/in/marcperezaladren)
