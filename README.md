@@ -63,7 +63,9 @@ The Data Warehouse follows the **Bronze–Silver–Gold (Medallion) Architecture
 - **🗄️ Relational Database** (SQL Server / PostgreSQL / MySQL – adaptable)  
 - **📄 CSV files** as data sources  
 - **🖊️ Draw.io** for data modeling and architecture diagrams  
-- **🔗 GitHub** for version control and documentation  
+- **🔗 GitHub** for version control and documentation
+- **📝 Notion** for project notes and documentation (Data Warehouse Project workspace)
+- - 👉 [Data Warehouse Project – Notion workspace](https://pushy-minute-9aa.notion.site/Data-Warehouse-Project-2cba0a1f8cc680c08acbd876ad55fe2c?source=copy_link)  
 
 ---
 
