@@ -1,4 +1,4 @@
-# 🏗️ SQL-Data-Warehouse--And-Analytics-Project
+# 🏗️ SQL-Data-Warehouse-And-Analytics-Project
 
 Welcome to the **Data Warehouse and Analytics Project** repository 📊  
 This project showcases the end-to-end design and implementation of a modern **Data Warehouse**, from raw data ingestion to business-ready analytics. It is built as a **portfolio project** to demonstrate practical SQL, data modeling, and analytical skills following industry best practices.
