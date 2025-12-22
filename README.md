@@ -82,7 +82,7 @@ Through this project, I strengthened my understanding of:
 
 ## 👋 About Me
 
-Hi, I'm **Marc Pérez Aladrén**, a data-driven professional with a strong interest in **data analytics, data engineering, and digital transformation** 🚀  
+Hi, I'm **Marc Pérez Aladrén**, a data-driven professional with a strong interest in **data analytics, data engineering, and digital transformation**.
 
 I hold a **Bachelor’s degree in Business Administration** from the University of Barcelona and a **Master’s in Global Digital Marketing**, and I recently worked at **SAP** as a **Digital Transformation Associate**, where I focused on data intelligence, account segmentation, CRM governance, and go-to-market analytics.
 
