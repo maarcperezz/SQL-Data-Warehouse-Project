@@ -1,4 +1,4 @@
-# 🏗️ SQL-Data-Warehouse-Project
+# 🏗️ SQL-Data-Warehouse--And-Analytics-Project
 
 Welcome to the **Data Warehouse and Analytics Project** repository 📊  
 This project showcases the end-to-end design and implementation of a modern **Data Warehouse**, from raw data ingestion to business-ready analytics. It is built as a **portfolio project** to demonstrate practical SQL, data modeling, and analytical skills following industry best practices.
@@ -68,15 +68,183 @@ The Data Warehouse follows the **Bronze–Silver–Gold (Medallion) Architecture
 
 ---
 
+## 📊 Analytics & Insights
+
+The analytics layer builds on top of the **Gold layer**, leveraging business-ready data to generate insights using SQL.  
+This section is divided into **Exploratory Data Analysis (EDA)** and **Analytical Reporting**, mirroring real-world analytical workflows.
+
+---
+
+## 🔎 Exploratory Data Analysis (EDA)
+
+The goal of the EDA phase is to understand the structure, scope, and behavior of the data before building analytical reports.
+
+### 🧭 1. Database Exploration (Structure & Metadata)
+
+**Objective:** Quickly understand what exists in the database and how it is organized.
+
+Key activities:
+- Explore tables and views using metadata (`INFORMATION_SCHEMA.TABLES`)
+- Inspect column-level metadata (`INFORMATION_SCHEMA.COLUMNS`)
+- Filter metadata for specific tables (e.g. `dim_customers`, `dim_products`)
+
+**Outcome:**  
+A clear overview of database structure, naming conventions, and data availability.
+
+---
+
+### 🧩 2. Dimension Exploration (Cardinality & Granularity)
+
+**Objective:** Understand the categorical dimensions and their level of detail.
+
+Key activities:
+- Retrieve unique values using `SELECT DISTINCT`
+- Analyze dimensions such as:
+  - Customer country 🌍
+  - Product category & subcategory 🏷️
+- Explore hierarchies:
+  - Category → Subcategory → Product
+
+**Outcome:**  
+Clear understanding of **low vs high cardinality** dimensions and their impact on aggregation levels.
+
+---
+
+### 📅 3. Date Exploration (Time Range & Boundaries)
+
+**Objective:** Identify the time span and boundaries of the dataset.
+
+Key activities:
+- Identify earliest and latest dates using `MIN()` and `MAX()`
+- Calculate time spans with `DATEDIFF()`
+- Apply analysis to:
+  - Order dates
+  - Customer birthdates
+- Derive customer age from birthdate
+
+**Outcome:**  
+Understanding of historical coverage, customer age distribution, and data freshness.
+
+---
+
+### 💰 4. Measure Exploration (Core Business KPIs)
+
+**Objective:** Compute the main business metrics using SQL aggregates.
+
+Key metrics calculated:
+- Total revenue (`SUM(sales_amount)`)
+- Total quantity sold
+- Average selling price
+- Number of orders (`COUNT` vs `COUNT(DISTINCT)`)
+- Total customers and products
+
+A consolidated **KPI summary query** was built using `UNION ALL`, combining:
+- `measure_name`
+- `measure_value`
+
+**Outcome:**  
+A high-level numerical overview of business performance.
+
+---
+
+### ⚖️ 5. Magnitude Analysis (Measure by Dimension)
+
+**Objective:** Compare metrics across different dimensions.
+
+Examples:
+- Customers by country 🌍
+- Customers by gender 👥
+- Products by category 🏷️
+- Revenue by category 💸
+- Revenue by customer 🧑‍💼
+- Quantity sold by country 🌐
+
+**Outcome:**  
+Identification of patterns, dominant segments, and distribution of business value.
+
+---
+
+### 🏆 6. Ranking Analysis (Top & Bottom Performers)
+
+**Objective:** Identify best and worst performers using ranking logic.
+
+Techniques used:
+- `TOP (N)` with `ORDER BY`
+- Window functions:
+  - `ROW_NUMBER()`
+  - `RANK()`
+  - `DENSE_RANK()`
+
+Examples:
+- Top 5 products by revenue 🥇
+- Bottom 5 products by revenue ❄️
+- Top customers by revenue 💎
+- Lowest-performing customers by order volume 📉
+
+**Outcome:**  
+Clear visibility into performance extremes and business priorities.
+
+---
+
+## 📈 Analytical Reports (Gold Layer Views)
+
+To operationalize analytics, insights were materialized as **SQL views** in the Gold layer.
+
+---
+
+### 👥 Customer Report
+
+A comprehensive customer-level report providing:
+- Customer identifiers and demographics
+- Customer lifespan and recency
+- Total orders, revenue, and quantities
+- Average order revenue
+- Average monthly revenue
+- Customer segmentation based on revenue performance
+
+This report enables deep customer comparison and value-based segmentation.
+
+---
+
+### 📦 Product Report
+
+A dedicated product-level analytical view designed to deliver actionable product insights.
+
+Key features:
+- Product details (name, category, subcategory)
+- Cost and pricing information
+- Product lifespan and last sale date
+- Total orders, customers, quantity sold, and revenue
+- Average selling price
+- Average order revenue
+- Average monthly revenue
+
+#### 🔖 Product Segmentation
+Products are classified into performance tiers based on total revenue:
+- **High performers**
+- **Mid-range performers**
+- **Low performers**
+
+**Outcome:**  
+A complete, business-ready product performance report that supports comparison, optimization, and strategic decision-making.
+
+---
+
 ## 📚 Key Learnings
 
-Through this project, I strengthened my understanding of:
+Through this project, I consolidated an **end-to-end understanding of how data warehouses support analytical decision-making**, from raw ingestion to business-ready insights.
 
-- End-to-end data warehousing workflows  
-- Medallion Architecture design and implementation  
-- Writing clean, maintainable, and analytical SQL  
-- Data modeling for analytics (star schema)  
-- Bridging data engineering and data analytics concepts
+**Key takeaways include:**
+
+- Designing and implementing a modern **Data Warehouse** using a **Medallion Architecture (Bronze, Silver, Gold)** to progressively improve data quality and usability  
+- Applying **SQL as an ETL tool**, handling data ingestion, cleansing, deduplication, standardization, and transformation across multiple layers  
+- Building **analytical data models** using a **star schema**, with fact and dimension tables optimized for reporting and BI consumption  
+- Performing **structured Exploratory Data Analysis (EDA)** in SQL, including database inspection, dimension analysis, date exploration, and KPI validation  
+- Developing **business-oriented analytics**, such as magnitude analysis, ranking analysis, and segmentation, to identify performance patterns and outliers  
+- Creating **reusable analytical reports as SQL views**, enabling consistent customer and product insights directly from the Gold layer  
+- Bridging **data engineering and analytics**, understanding how upstream modeling and data quality decisions directly impact downstream insights and reporting  
+
+This project strengthened both my **technical SQL skills** and my ability to **think analytically about data as a business asset**, closely mirroring real-world data team workflows.
 
 ---
 
