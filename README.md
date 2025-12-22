@@ -89,4 +89,4 @@ I hold a **Bachelor’s degree in Business Administration** from the University 
 This project represents my hands-on approach to learning by building **end-to-end data solutions**, bridging business context with technical execution. I’m particularly interested in roles where data, process optimization, and strategic decision-making intersect.
 
 🔗 **Connect with me on LinkedIn:**  
-[https://www.linkedin.com/in/marcperezaladren](https://www.linkedin.com/in/marcperezaladren)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marc-p%C3%A9rez-aladr%C3%A9n/)
