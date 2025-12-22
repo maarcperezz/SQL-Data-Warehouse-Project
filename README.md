@@ -13,7 +13,7 @@ This project aims to simulate a real-world data warehousing scenario, focusing o
 
 ---
 
-## 🛠️ Building the Data Warehouse (Data Engineering)
+## 🛠️ Building the Data Warehouse
 
 ### 🎯 Objective
 Design and implement a modern **Data Warehouse** using SQL, consolidating sales data from multiple source systems to enable reliable analytics and informed decision-making.
