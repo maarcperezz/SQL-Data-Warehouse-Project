@@ -33,6 +33,7 @@ Design and implement a modern **Data Warehouse** using SQL, consolidating sales 
 ## 🏛️ Data Architecture Overview
 
 The Data Warehouse follows the **Bronze–Silver–Gold (Medallion) Architecture**, ensuring separation of concerns and data quality at each stage.
+
 <img width="1426" height="937" alt="Imagen1" src="https://github.com/user-attachments/assets/8a84ab0c-66d3-40a5-b207-1aa98b478ccb" />
 
 
